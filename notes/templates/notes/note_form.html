@@ -1,0 +1,16 @@
+<!-- note_form.html.      Template for creating and updating a note -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Note Form</title>
+</head>
+<body>
+    <h1>Note Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'note_list' %}">Back to notes</a>
+</body>
+</html>

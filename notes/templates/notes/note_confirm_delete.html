@@ -1,0 +1,15 @@
+<!-- note_confirm_delete.html    Template for confirming the deletion of a note -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Note</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ note.title }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'note_list' %}">Back to notes</a>
+</body>
+</html>
